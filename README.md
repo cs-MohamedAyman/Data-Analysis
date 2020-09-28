@@ -35,3 +35,7 @@ Data Analysis lectures for computer science students.
 * ***Python Data Products for Predictive Analytics Specialization*** by University of California, San Diego
 * ***Applied Data Science with Python Specialization*** by University of Michigan
 * ***Python for Everybody Specialization*** by University of Michigan
+
+<img align="right" width="80" height="50" src="https://github.com/cs-MohamedAyman/YouTube-Playlists/blob/master/organizations-logos/youtube.jpg">
+
+## Youtube-Playlists
