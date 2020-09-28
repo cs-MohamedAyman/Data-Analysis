@@ -1,3 +1,5 @@
+<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
+
 # Data-Analysis
 Data Analysis lectures for computer science students.
 
