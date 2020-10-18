@@ -1,7 +1,34 @@
 <img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
 
-# Data-Analysis
+# Data-Analysis `60H`
 Data Analysis lectures for computer science students.
+
+## `Part 1:` Linear Algebra with Python `20H`
+
+## Lecture 01 - [Numpy Library]()
+## Lecture 02 - [Scipy Library]()
+## Lecture 03 - [Vectors]()
+## Lecture 04 - [Matrices]()
+## Lecture 05 - [Systems of Linear Equations]()
+## Lecture 06 - [Eigenvalues and Eigenvectors]()
+
+## `Part 2:` Data Visualization with Python `20H`
+
+## Lecture 07 - [Matplotlib Library]()
+## Lecture 08 - [Seaborn Library]()
+## Lecture 09 - [Information Visualization]()
+## Lecture 10 - [Charting Fundamentals]()
+## Lecture 11 - [Applied Visualizations]()
+## Lecture 12 - [Creating Dashboards and Storytelling]()
+
+## `Part 3:` Probability and Statistics with Python `20H`
+
+## Lecture 13 - [Pandas Library]()
+## Lecture 14 - [Basic Data Processing]()
+## Lecture 15 - [Advanced Data Processing]()
+## Lecture 16 - [Statistical Analysis]()
+## Lecture 17 - [Probability Distributions]()
+## Lecture 18 - [Hypothesis Testing]()
 
 <img align="right" width="80" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/textbooks.jpg">
 
