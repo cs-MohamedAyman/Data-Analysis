@@ -5,7 +5,7 @@ Data Analysis lectures for computer science students.
 
 ## `Part 1:` Linear Algebra with Python `20H`
 
-## Lecture 01 - [Numpy Library]()
+## Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-01-Numpy-Library)
 ## Lecture 02 - [Scipy Library]()
 ## Lecture 03 - [Vectors]()
 ## Lecture 04 - [Matrices]()
@@ -14,7 +14,7 @@ Data Analysis lectures for computer science students.
 
 ## `Part 2:` Data Visualization with Python `20H`
 
-## Lecture 07 - [Matplotlib Library]()
+## Lecture 07 - [Matplotlib Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-07-Matplotlib-Library)
 ## Lecture 08 - [Seaborn Library]()
 ## Lecture 09 - [Information Visualization]()
 ## Lecture 10 - [Charting Fundamentals]()
@@ -23,7 +23,7 @@ Data Analysis lectures for computer science students.
 
 ## `Part 3:` Probability and Statistics with Python `20H`
 
-## Lecture 13 - [Pandas Library]()
+## Lecture 13 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-13-Pandas-Library)
 ## Lecture 14 - [Basic Data Processing]()
 ## Lecture 15 - [Advanced Data Processing]()
 ## Lecture 16 - [Statistical Analysis]()
