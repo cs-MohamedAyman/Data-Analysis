@@ -2,11 +2,27 @@
 
 # Lecture 01 - Numpy Library
 
+## Table of Content
+
+### 1.1 Numpy Basics
+### 1.2 Array Creation
+### 1.3 Printing Arrays
+### 1.4 Basic Operations
+### 1.5 Universal Functions
+### 1.6 Indexing, Slicing and Iterating
+### 1.7 Shape Manipulation - Changing the shape of an array
+### 1.8 Shape Manipulation - Stacking together different arrays
+### 1.9 Shape Manipulation - Splitting one array into several smaller ones
+### 1.10 Copies and Views
+### 1.11 Linear Algebra
+
 ## 1.1 Numpy Basics
 
 NumPy’s main object is the homogeneous multidimensional array. It is a table of elements (usually numbers), all of the same type, indexed by a tuple of non-negative integers. In NumPy dimensions are called axes.
 
 NumPy’s array class is called ndarray. It is also known by the alias array. Note that numpy.array is not the same as the Standard Python Library class array.array, which only handles one-dimensional arrays and offers less functionality. The more important attributes of an ndarray object are:
+
+Numpy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays. If you are already familiar with MATLAB, you might find this tutorial useful to get started with Numpy.
 
 - ***ndarray.ndim***: the number of axes (dimensions) of the array.
 
@@ -582,142 +598,127 @@ array([[6., 7., 6., 9., 0., 5., 4., 0., 6., 8., 5., 2.],
 vsplit splits along the vertical axis, and array_split allows one to specify along which axis to split.
 
 ## 1.10 Copies and Views
+
 When operating and manipulating arrays, their data is sometimes copied into a new array and sometimes not. This is often a source of confusion for beginners. There are three cases:
 
 ### No Copy at All
 
 Simple assignments make no copy of objects or their data.
 ```python
->>> a = np.array([[ 0,  1,  2,  3],
-...               [ 4,  5,  6,  7],
-...               [ 8,  9, 10, 11]])
->>> b = a            # no new object is created
->>> b is a           # a and b are two names for the same ndarray object
-True
+a = np.array([[ 0,  1,  2,  3],
+              [ 4,  5,  6,  7],
+              [ 8,  9, 10, 11]])
+b = a            # no new object is created
+print(b is a)           # a and b are two names for the same ndarray object
 ```
 ```text
-
+True
 ```
 Python passes mutable objects as references, so function calls make no copy.
 ```python
->>> def f(x):
-...     print(id(x))
-...
->>> id(a)                           # id is a unique identifier of an object
-148293216  # may vary
->>> f(a)
-148293216  # may vary
-
+def f(x):
+    print(id(x))
+print(id(a))                           # id is a unique identifier of an object
+f(a)
 ```
 ```text
-
+148293216  # may vary
+148293216  # may vary
 ```
 
 ### View or Shallow Copy
 
 Different array objects can share the same data. The view method creates a new array object that looks at the same data.
 ```python
->>> c = a.view()
->>> c is a
+c = a.view()
+print(c is a)
+c.base is a                        # c is a view of the data owned by a
+c.flags.owndata
+c = c.reshape((2, 6))                      # a's shape doesn't change
+print(a.shape)
+c[0, 4] = 1234                      # a's data changes
+print(a)
+```
+```text
 False
->>> c.base is a                        # c is a view of the data owned by a
 True
->>> c.flags.owndata
 False
->>>
->>> c = c.reshape((2, 6))                      # a's shape doesn't change
->>> a.shape
 (3, 4)
->>> c[0, 4] = 1234                      # a's data changes
->>> a
 array([[   0,    1,    2,    3],
        [1234,    5,    6,    7],
        [   8,    9,   10,   11]])
 ```
-```text
-
-```
 Slicing an array returns a view of it:
 ```python
->>> s = a[ : , 1:3]     # spaces added for clarity; could also be written "s = a[:, 1:3]"
->>> s[:] = 10           # s[:] is a view of s. Note the difference between s = 10 and s[:] = 10
->>> a
+s = a[ : , 1:3]     # spaces added for clarity; could also be written "s = a[:, 1:3]"
+s[:] = 10           # s[:] is a view of s. Note the difference between s = 10 and s[:] = 10
+print(a)
+```
+```text
 array([[   0,   10,   10,    3],
        [1234,   10,   10,    7],
        [   8,   10,   10,   11]])
-```
-```text
-
 ```
 
 ### Deep Copy
 
 The copy method makes a complete copy of the array and its data.
 ```python
->>> d = a.copy()                          # a new array object with new data is created
->>> d is a
+d = a.copy()                          # a new array object with new data is created
+print(d is a)
+print(d.base is a)                           # d doesn't share anything with a
+d[0, 0] = 9999
+print(a)
+```
+```text
 False
->>> d.base is a                           # d doesn't share anything with a
 False
->>> d[0,0] = 9999
->>> a
 array([[   0,   10,   10,    3],
        [1234,   10,   10,    7],
        [   8,   10,   10,   11]])
 ```
-```text
-
-```
 Sometimes copy should be called after slicing if the original array is not required anymore. For example, suppose a is a huge intermediate result and the final result b only contains a small fraction of a, a deep copy should be made when constructing b with slicing:
 ```python
->>> a = np.arange(int(1e8))
->>> b = a[:100].copy()
->>> del a  # the memory of ``a`` can be released.
-```
-```text
-
+a = np.arange(int(1e8))
+b = a[:100].copy()
+del a  # the memory of ``a`` can be released.
 ```
 If b = a[:100] is used instead, a is referenced by b and will persist in memory even if del a is executed.
 
 ## 1.11 Linear Algebra
 
 ```python
->>> import numpy as np
->>> a = np.array([[1.0, 2.0], [3.0, 4.0]])
->>> print(a)
-[[1. 2.]
- [3. 4.]]
-
->>> a.transpose()
-array([[1., 3.],
-       [2., 4.]])
-
->>> np.linalg.inv(a)
-array([[-2. ,  1. ],
-       [ 1.5, -0.5]])
-
->>> u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
->>> u
-array([[1., 0.],
-       [0., 1.]])
->>> j = np.array([[0.0, -1.0], [1.0, 0.0]])
-
->>> j @ j        # matrix product
-array([[-1.,  0.],
-       [ 0., -1.]])
-
->>> np.trace(u)  # trace
-2.0
-
->>> y = np.array([[5.], [7.]])
->>> np.linalg.solve(a, y)
-array([[-3.],
-       [ 4.]])
-
->>> np.linalg.eig(j)
-(array([0.+1.j, 0.-1.j]), array([[0.70710678+0.j        , 0.70710678-0.j        ],
-       [0.        -0.70710678j, 0.        +0.70710678j]]))
+import numpy as np
+a = np.array([[1.0, 2.0], [3.0, 4.0]])
+print(a)
+a.transpose()
+np.linalg.inv(a)
+u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
+print(u)
+j = np.array([[0.0, -1.0], [1.0, 0.0]])
+j @ j        # matrix product
+x = np.trace(u)  # trace
+print(x)
+y = np.array([[5.], [7.]])
+x = np.linalg.solve(a, y)
+print(x)
+x = np.linalg.eig(j)
+print(x)
 ```
 ```text
-
+[[1. 2.]
+ [3. 4.]]
+array([[1., 3.],
+       [2., 4.]])
+array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+array([[1., 0.],
+       [0., 1.]])
+array([[-1.,  0.],
+       [ 0., -1.]])
+2.0
+array([[-3.],
+       [ 4.]])
+(array([0.+1.j, 0.-1.j]), array([[0.70710678+0.j        , 0.70710678-0.j        ],
+       [0.        -0.70710678j, 0.        +0.70710678j]]))
 ```
