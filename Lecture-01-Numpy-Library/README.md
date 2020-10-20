@@ -390,37 +390,333 @@ array([[100, 101, 102],
 array([[  2,  13],
        [102, 113]])
 ```
-
+Iterating over multidimensional arrays is done with respect to the first axis:
 ```python
+for row in b:
+    print(row)
+```
+```text
+[0 1 2 3]
+[10 11 12 13]
+[20 21 22 23]
+[30 31 32 33]
+[40 41 42 43]
+```
+However, if one wants to perform an operation on each element in the array, one can use the flat attribute which is an iterator over all the elements of the array:
+```python
+for element in b.flat:
+    print(element, end = ' ')
+```
+```text
+0 1 2 3 10 11 12 13 20 21 22 23 30 31 32 33 40 41 42 43 
+```
+
+## 1.7 Shape Manipulation - Changing the shape of an array
+
+An array has a shape given by the number of elements along each axis:
+```python
+a = np.floor(10*rg.random((3,4)))
+print(a)
+print(a.shape)
+```
+```text
+array([[3., 7., 3., 4.],
+       [1., 4., 2., 2.],
+       [7., 2., 4., 9.]])
+(3, 4)
+```
+The shape of an array can be changed with various commands. Note that the following three commands all return a modified array, but do not change the original array:
+```python
+print(a.ravel())  # returns the array, flattened
+print(a.reshape(6, 2))  # returns the array with a modified shape
+print(a.T)  # returns the array, transposed
+print(a.T.shape)
+print(a.shape)
+```
+```text
+array([3., 7., 3., 4., 1., 4., 2., 2., 7., 2., 4., 9.])
+array([[3., 7.],
+       [3., 4.],
+       [1., 4.],
+       [2., 2.],
+       [7., 2.],
+       [4., 9.]])
+array([[3., 1., 7.],
+       [7., 4., 2.],
+       [3., 2., 4.],
+       [4., 2., 9.]])
+(4, 3)
+(3, 4)
+```
+The order of the elements in the array resulting from ravel() is normally “C-style”, that is, the rightmost index “changes the fastest”, so the element after a[0,0] is a[0,1]. If the array is reshaped to some other shape, again the array is treated as “C-style”. NumPy normally creates arrays stored in this order, so ravel() will usually not need to copy its argument, but if the array was made by taking slices of another array or created with unusual options, it may need to be copied. The functions ravel() and reshape() can also be instructed, using an optional argument, to use FORTRAN-style arrays, in which the leftmost index changes the fastest.
+
+The reshape function returns its argument with a modified shape, whereas the ndarray.resize method modifies the array itself:
+```python
+print(a)
+a.resize((2, 6))
+print(a)
+```
+```text
+array([[3., 7., 3., 4.],
+       [1., 4., 2., 2.],
+       [7., 2., 4., 9.]])
+array([[3., 7., 3., 4., 1., 4.],
+       [2., 2., 7., 2., 4., 9.]])
+```
+If a dimension is given as -1 in a reshaping operation, the other dimensions are automatically calculated:
+```python
+print(a.reshape(3, -1))
+```
+```text
+array([[3., 7., 3., 4.],
+       [1., 4., 2., 2.],
+       [7., 2., 4., 9.]])
+```
+
+## 1.8 Shape Manipulation - Stacking together different arrays
+
+Several arrays can be stacked together along different axes:
+```python
+a = np.floor(10*rg.random((2,2)))
+print(a)
+b = np.floor(10*rg.random((2,2)))
+print(b)
+x = np.vstack((a, b))
+print(x)
+x = np.hstack((a, b))
+print(x)
+```
+```text
+array([[9., 7.],
+       [5., 2.]])
+array([[1., 9.],
+       [5., 1.]])
+array([[9., 7.],
+       [5., 2.],
+       [1., 9.],
+       [5., 1.]])
+array([[9., 7., 1., 9.],
+       [5., 2., 5., 1.]])
+```
+The function column_stack stacks 1D arrays as columns into a 2D array. It is equivalent to hstack only for 2D arrays:
+```python
+from numpy import newaxis
+x = np.column_stack((a, b))     # with 2D arrays
+print(x)
+a = np.array([4., 2.])
+b = np.array([3., 8.])
+x = np.column_stack((a, b))     # returns a 2D array
+print(x)
+x = np.hstack((a, b))           # the result is different
+print(x)
+x = a[:,newaxis]               # view `a` as a 2D column vector
+print(x)
+x = np.column_stack((a[:,newaxis],b[:,newaxis]))
+print(x)
+x = np.hstack((a[:,newaxis],b[:,newaxis]))   # the result is the same
+print(x)
+```
+```text
+array([[9., 7., 1., 9.],
+       [5., 2., 5., 1.]])
+array([[4., 3.],
+       [2., 8.]])
+array([4., 2., 3., 8.])
+array([[4.],
+       [2.]])
+array([[4., 3.],
+       [2., 8.]])
+array([[4., 3.],
+       [2., 8.]])
+```
+On the other hand, the function row_stack is equivalent to vstack for any input arrays. In fact, row_stack is an alias for vstack:
+```python
+x = np.column_stack is np.hstack
+print(x)
+x = np.row_stack is np.vstack
+print(x)
+```
+```text
+False
+True
+```
+In general, for arrays with more than two dimensions, hstack stacks along their second axes, vstack stacks along their first axes, and concatenate allows for an optional arguments giving the number of the axis along which the concatenation should happen.
+
+Note
+
+In complex cases, r_ and c_ are useful for creating arrays by stacking numbers along one axis. They allow the use of range literals (“:”)
+```python
+x = np.r_[1:4,0,4]
+print(x)
+```
+```text
+array([1, 2, 3, 0, 4])
+```
+When used with arrays as arguments, r_ and c_ are similar to vstack and hstack in their default behavior, but allow for an optional argument giving the number of the axis along which to concatenate.
+
+## 1.9 Shape Manipulation - Splitting one array into several smaller ones
+
+Using hsplit, you can split an array along its horizontal axis, either by specifying the number of equally shaped arrays to return, or by specifying the columns after which the division should occur:
+```python
+a = np.floor(10*rg.random((2,12)))
+print(a)
+# Split a into 3
+x = np.hsplit(a,3)
+print(x)
+# Split a after the third and the fourth column
+x = np.hsplit(a,(3,4))
+print(x)
+```
+```text
+array([[6., 7., 6., 9., 0., 5., 4., 0., 6., 8., 5., 2.],
+       [8., 5., 5., 7., 1., 8., 6., 7., 1., 8., 1., 0.]])
+[array([[6., 7., 6., 9.],
+       [8., 5., 5., 7.]]), array([[0., 5., 4., 0.],
+       [1., 8., 6., 7.]]), array([[6., 8., 5., 2.],
+       [1., 8., 1., 0.]])]
+[array([[6., 7., 6.],
+       [8., 5., 5.]]), array([[9.],
+       [7.]]), array([[0., 5., 4., 0., 6., 8., 5., 2.],
+       [1., 8., 6., 7., 1., 8., 1., 0.]])]
+```
+vsplit splits along the vertical axis, and array_split allows one to specify along which axis to split.
+
+## 1.10 Copies and Views
+When operating and manipulating arrays, their data is sometimes copied into a new array and sometimes not. This is often a source of confusion for beginners. There are three cases:
+
+### No Copy at All
+
+Simple assignments make no copy of objects or their data.
+```python
+>>> a = np.array([[ 0,  1,  2,  3],
+...               [ 4,  5,  6,  7],
+...               [ 8,  9, 10, 11]])
+>>> b = a            # no new object is created
+>>> b is a           # a and b are two names for the same ndarray object
+True
+```
+```text
+
+```
+Python passes mutable objects as references, so function calls make no copy.
+```python
+>>> def f(x):
+...     print(id(x))
+...
+>>> id(a)                           # id is a unique identifier of an object
+148293216  # may vary
+>>> f(a)
+148293216  # may vary
 
 ```
 ```text
 
 ```
 
-```python
+### View or Shallow Copy
 
+Different array objects can share the same data. The view method creates a new array object that looks at the same data.
+```python
+>>> c = a.view()
+>>> c is a
+False
+>>> c.base is a                        # c is a view of the data owned by a
+True
+>>> c.flags.owndata
+False
+>>>
+>>> c = c.reshape((2, 6))                      # a's shape doesn't change
+>>> a.shape
+(3, 4)
+>>> c[0, 4] = 1234                      # a's data changes
+>>> a
+array([[   0,    1,    2,    3],
+       [1234,    5,    6,    7],
+       [   8,    9,   10,   11]])
+```
+```text
+
+```
+Slicing an array returns a view of it:
+```python
+>>> s = a[ : , 1:3]     # spaces added for clarity; could also be written "s = a[:, 1:3]"
+>>> s[:] = 10           # s[:] is a view of s. Note the difference between s = 10 and s[:] = 10
+>>> a
+array([[   0,   10,   10,    3],
+       [1234,   10,   10,    7],
+       [   8,   10,   10,   11]])
 ```
 ```text
 
 ```
 
-```python
+### Deep Copy
 
+The copy method makes a complete copy of the array and its data.
+```python
+>>> d = a.copy()                          # a new array object with new data is created
+>>> d is a
+False
+>>> d.base is a                           # d doesn't share anything with a
+False
+>>> d[0,0] = 9999
+>>> a
+array([[   0,   10,   10,    3],
+       [1234,   10,   10,    7],
+       [   8,   10,   10,   11]])
 ```
 ```text
 
 ```
-
+Sometimes copy should be called after slicing if the original array is not required anymore. For example, suppose a is a huge intermediate result and the final result b only contains a small fraction of a, a deep copy should be made when constructing b with slicing:
 ```python
-
+>>> a = np.arange(int(1e8))
+>>> b = a[:100].copy()
+>>> del a  # the memory of ``a`` can be released.
 ```
 ```text
 
 ```
+If b = a[:100] is used instead, a is referenced by b and will persist in memory even if del a is executed.
+
+## 1.11 Linear Algebra
 
 ```python
+>>> import numpy as np
+>>> a = np.array([[1.0, 2.0], [3.0, 4.0]])
+>>> print(a)
+[[1. 2.]
+ [3. 4.]]
 
+>>> a.transpose()
+array([[1., 3.],
+       [2., 4.]])
+
+>>> np.linalg.inv(a)
+array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+
+>>> u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
+>>> u
+array([[1., 0.],
+       [0., 1.]])
+>>> j = np.array([[0.0, -1.0], [1.0, 0.0]])
+
+>>> j @ j        # matrix product
+array([[-1.,  0.],
+       [ 0., -1.]])
+
+>>> np.trace(u)  # trace
+2.0
+
+>>> y = np.array([[5.], [7.]])
+>>> np.linalg.solve(a, y)
+array([[-3.],
+       [ 4.]])
+
+>>> np.linalg.eig(j)
+(array([0.+1.j, 0.-1.j]), array([[0.70710678+0.j        , 0.70710678-0.j        ],
+       [0.        -0.70710678j, 0.        +0.70710678j]]))
 ```
 ```text
 
