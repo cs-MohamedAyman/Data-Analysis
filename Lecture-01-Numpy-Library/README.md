@@ -4,15 +4,15 @@
 
 ## Table of Content
 
-### 1.1- Numpy Basics
-### 1.2- Array Creation
-### 1.3- Printing Arrays
-### 1.4- Basic Operations
-### 1.5- Indexing, Slicing and Iterating
-### 1.6- Shape Manipulation - Changing the shape of an array
-### 1.7- Shape Manipulation - Stacking together different arrays
-### 1.8- Shape Manipulation - Splitting one array into several smaller ones
-### 1.9- Copies and Views
+#### 1.1- Numpy Basics
+#### 1.2- Array Creation
+#### 1.3- Printing Arrays
+#### 1.4- Basic Operations
+#### 1.5- Indexing, Slicing and Iterating
+#### 1.6- Shape Manipulation
+#### 1.7- Stacking different arrays
+#### 1.8- Splitting one array into several smaller ones
+#### 1.9- Copies and Views
 
 ## Lecture Content
 
@@ -749,7 +749,7 @@ for element in b.flat:
 0 1 2 3 10 11 12 13 20 21 22 23 30 31 32 33 40 41 42 43 
 ```
 
-## 1.6- Shape Manipulation - Changing the shape of an array
+## 1.6- Shape Manipulation
 
 An array has a shape given by the number of elements along each axis:
 ```python
@@ -811,7 +811,7 @@ array([[3., 7., 3., 4.],
        [7., 2., 4., 9.]])
 ```
 
-## 1.7- Shape Manipulation - Stacking together different arrays
+## 1.7- Stacking different arrays
 
 Several arrays can be stacked together along different axes:
 ```python
@@ -919,7 +919,7 @@ array([[6., 7., 6., 9., 0., 5., 4., 0., 6., 8., 5., 2.],
 ```
 vsplit splits along the vertical axis, and array_split allows one to specify along which axis to split.
 
-## 1.9- Copies and Views
+## 1.8- Copies and Views
 
 When operating and manipulating arrays, their data is sometimes copied into a new array and sometimes not. This is often a source of confusion for beginners. There are three cases:
 
