@@ -8,13 +8,11 @@
 ### 1.2- Array Creation
 ### 1.3- Printing Arrays
 ### 1.4- Basic Operations
-### 1.5- Universal Functions
-### 1.6- Indexing, Slicing and Iterating
-### 1.7- Shape Manipulation - Changing the shape of an array
-### 1.8- Shape Manipulation - Stacking together different arrays
-### 1.9- Shape Manipulation - Splitting one array into several smaller ones
-### 1.10- Copies and Views
-### 1.11- Linear Algebra
+### 1.5- Indexing, Slicing and Iterating
+### 1.6- Shape Manipulation - Changing the shape of an array
+### 1.7- Shape Manipulation - Stacking together different arrays
+### 1.8- Shape Manipulation - Splitting one array into several smaller ones
+### 1.9- Copies and Views
 
 ## Lecture Content
 
@@ -25,7 +23,25 @@ NumPy’s main object is the homogeneous multidimensional array. It is a table o
 NumPy’s array class is called ndarray. It is also known by the alias array. Note that numpy.array is not the same as the Standard Python Library class array.array, which only handles one-dimensional arrays and offers less functionality. The more important attributes of an ndarray object are:
 
 Numpy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays. If you are already familiar with MATLAB, you might find this tutorial useful to get started with Numpy.
-
+Datatypes
+Every numpy array is a grid of elements of the same type. Numpy provides a large set of numeric datatypes that you can use to construct arrays. Numpy tries to guess a datatype when you create an array, but functions that construct arrays usually also include an optional argument to explicitly specify the datatype. Here is an example:
+```python
+import numpy as np
+# Let numpy choose the datatype
+x = np.array([1, 2])
+print(x.dtype)
+# Let numpy choose the datatype
+x = np.array([1.0, 2.0])
+print(x.dtype)
+# Force a particular datatype
+x = np.array([1, 2], dtype=np.int64)
+print(x.dtype)
+```
+```text
+int64
+float64
+int64
+```
 - ***ndarray.ndim***: the number of axes (dimensions) of the array.
 
 - ***ndarray.shape***: the dimensions of the array. This is a tuple of integers indicating the size of the array in each dimension. For a matrix with n rows and m columns, shape will be (n,m). The length of the shape tuple is therefore the number of axes, ndim.
@@ -37,7 +53,6 @@ Numpy is the core library for scientific computing in Python. It provides a high
 - ***ndarray.itemsize***: the size in bytes of each element of the array. For example, an array of elements of type float64 has itemsize 8 (=64/8), while one of type complex32 has itemsize 4 (=32/8). It is equivalent to ndarray.dtype.itemsize.
 
 - ***ndarray.data***: the buffer containing the actual elements of the array. Normally, we won’t need to use this attribute because we will access the elements in an array using indexing facilities.
-
 ```python
 import numpy as np
 a = np.arange(15).reshape(3, 5)
@@ -241,6 +256,106 @@ print(x)
 
 ## 1.4- Basic Operations
 
+Array math
+Basic mathematical functions operate elementwise on arrays, and are available both as operator overloads and as functions in the numpy module:
+```python
+import numpy as np
+
+x = np.array([[1,2],[3,4]], dtype=np.float64)
+y = np.array([[5,6],[7,8]], dtype=np.float64)
+
+# Elementwise sum; both produce the array
+# [[ 6.0  8.0]
+#  [10.0 12.0]]
+print(x + y)
+print(np.add(x, y))
+
+# Elementwise difference; both produce the array
+# [[-4.0 -4.0]
+#  [-4.0 -4.0]]
+print(x - y)
+print(np.subtract(x, y))
+
+# Elementwise product; both produce the array
+# [[ 5.0 12.0]
+#  [21.0 32.0]]
+print(x * y)
+print(np.multiply(x, y))
+
+# Elementwise division; both produce the array
+# [[ 0.2         0.33333333]
+#  [ 0.42857143  0.5       ]]
+print(x / y)
+print(np.divide(x, y))
+
+# Elementwise square root; produces the array
+# [[ 1.          1.41421356]
+#  [ 1.73205081  2.        ]]
+print(np.sqrt(x))
+```
+```text
+
+```
+Note that unlike MATLAB, * is elementwise multiplication, not matrix multiplication. We instead use the dot function to compute inner products of vectors, to multiply a vector by a matrix, and to multiply matrices. dot is available both as a function in the numpy module and as an instance method of array objects:
+```python
+import numpy as np
+
+x = np.array([[1,2],[3,4]])
+y = np.array([[5,6],[7,8]])
+
+v = np.array([9,10])
+w = np.array([11, 12])
+
+# Inner product of vectors; both produce 219
+print(v.dot(w))
+print(np.dot(v, w))
+
+# Matrix / vector product; both produce the rank 1 array [29 67]
+print(x.dot(v))
+print(np.dot(x, v))
+
+# Matrix / matrix product; both produce the rank 2 array
+# [[19 22]
+#  [43 50]]
+print(x.dot(y))
+print(np.dot(x, y))
+```
+```text
+
+```
+Numpy provides many useful functions for performing computations on arrays; one of the most useful is sum:
+```python
+import numpy as np
+
+x = np.array([[1,2],[3,4]])
+
+print(np.sum(x))  # Compute sum of all elements; prints "10"
+print(np.sum(x, axis=0))  # Compute sum of each column; prints "[4 6]"
+print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
+```
+```text
+
+```
+You can find the full list of mathematical functions provided by numpy in the documentation.
+
+Apart from computing mathematical functions using arrays, we frequently need to reshape or otherwise manipulate data in arrays. The simplest example of this type of operation is transposing a matrix; to transpose a matrix, simply use the T attribute of an array object:
+```python
+import numpy as np
+
+x = np.array([[1,2], [3,4]])
+print(x)    # Prints "[[1 2]
+            #          [3 4]]"
+print(x.T)  # Prints "[[1 3]
+            #          [2 4]]"
+
+# Note that taking the transpose of a rank 1 array does nothing:
+v = np.array([1,2,3])
+print(v)    # Prints "[1 2 3]"
+print(v.T)  # Prints "[1 2 3]"
+```
+```text
+
+```
 Arithmetic operators on arrays apply elementwise. A new array is created and filled with the result.
 ```python
 a = np.array([20, 30, 40, 50])
@@ -352,9 +467,42 @@ array([[ 0,  1,  3,  6],
        [ 4,  9, 15, 22],
        [ 8, 17, 27, 38]])
 ```
-
-## 1.5- Universal Functions
-
+Simple Array Operations
+```python
+import numpy as np
+a = np.array([[1.0, 2.0], [3.0, 4.0]])
+print(a)
+a.transpose()
+np.linalg.inv(a)
+u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
+print(u)
+j = np.array([[0.0, -1.0], [1.0, 0.0]])
+j @ j        # matrix product
+x = np.trace(u)  # trace
+print(x)
+y = np.array([[5.], [7.]])
+x = np.linalg.solve(a, y)
+print(x)
+x = np.linalg.eig(j)
+print(x)
+```
+```text
+[[1. 2.]
+ [3. 4.]]
+array([[1., 3.],
+       [2., 4.]])
+array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+array([[1., 0.],
+       [0., 1.]])
+array([[-1.,  0.],
+       [ 0., -1.]])
+2.0
+array([[-3.],
+       [ 4.]])
+(array([0.+1.j, 0.-1.j]), array([[0.70710678+0.j        , 0.70710678-0.j        ],
+       [0.        -0.70710678j, 0.        +0.70710678j]]))
+```
 NumPy provides familiar mathematical functions such as sin, cos, and exp. In NumPy, these are called “universal functions”(ufunc). Within NumPy, these functions operate elementwise on an array, producing an array as output.
 ```python
 B = np.arange(3)
@@ -373,7 +521,7 @@ array([0.        , 1.        , 1.41421356])
 array([2., 0., 6.])
 ```
 
-## 1.6- Indexing, Slicing and Iterating
+## 1.5- Indexing, Slicing and Iterating
 
 Numpy offers several ways to index into arrays.
 Slicing: Similar to Python lists, numpy arrays can be sliced. Since arrays may be multidimensional, you must specify a slice for each dimension of the array:
@@ -601,7 +749,7 @@ for element in b.flat:
 0 1 2 3 10 11 12 13 20 21 22 23 30 31 32 33 40 41 42 43 
 ```
 
-## 1.7- Shape Manipulation - Changing the shape of an array
+## 1.6- Shape Manipulation - Changing the shape of an array
 
 An array has a shape given by the number of elements along each axis:
 ```python
@@ -663,7 +811,7 @@ array([[3., 7., 3., 4.],
        [7., 2., 4., 9.]])
 ```
 
-## 1.8- Shape Manipulation - Stacking together different arrays
+## 1.7- Shape Manipulation - Stacking together different arrays
 
 Several arrays can be stacked together along different axes:
 ```python
@@ -744,7 +892,7 @@ array([1, 2, 3, 0, 4])
 ```
 When used with arrays as arguments, r_ and c_ are similar to vstack and hstack in their default behavior, but allow for an optional argument giving the number of the axis along which to concatenate.
 
-## 1.9- Shape Manipulation - Splitting one array into several smaller ones
+## 1.8- Shape Manipulation - Splitting one array into several smaller ones
 
 Using hsplit, you can split an array along its horizontal axis, either by specifying the number of equally shaped arrays to return, or by specifying the columns after which the division should occur:
 ```python
@@ -771,7 +919,7 @@ array([[6., 7., 6., 9., 0., 5., 4., 0., 6., 8., 5., 2.],
 ```
 vsplit splits along the vertical axis, and array_split allows one to specify along which axis to split.
 
-## 1.10- Copies and Views
+## 1.9- Copies and Views
 
 When operating and manipulating arrays, their data is sometimes copied into a new array and sometimes not. This is often a source of confusion for beginners. There are three cases:
 
@@ -858,41 +1006,3 @@ b = a[:100].copy()
 del a  # the memory of ``a`` can be released.
 ```
 If b = a[:100] is used instead, a is referenced by b and will persist in memory even if del a is executed.
-
-## 1.11- Linear Algebra
-
-```python
-import numpy as np
-a = np.array([[1.0, 2.0], [3.0, 4.0]])
-print(a)
-a.transpose()
-np.linalg.inv(a)
-u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
-print(u)
-j = np.array([[0.0, -1.0], [1.0, 0.0]])
-j @ j        # matrix product
-x = np.trace(u)  # trace
-print(x)
-y = np.array([[5.], [7.]])
-x = np.linalg.solve(a, y)
-print(x)
-x = np.linalg.eig(j)
-print(x)
-```
-```text
-[[1. 2.]
- [3. 4.]]
-array([[1., 3.],
-       [2., 4.]])
-array([[-2. ,  1. ],
-       [ 1.5, -0.5]])
-array([[1., 0.],
-       [0., 1.]])
-array([[-1.,  0.],
-       [ 0., -1.]])
-2.0
-array([[-3.],
-       [ 4.]])
-(array([0.+1.j, 0.-1.j]), array([[0.70710678+0.j        , 0.70710678-0.j        ],
-       [0.        -0.70710678j, 0.        +0.70710678j]]))
-```
