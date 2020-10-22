@@ -4,15 +4,15 @@
 
 ## Table of Content
 
-#### 1.1- Numpy Basics
-#### 1.2- Array Creation
-#### 1.3- Printing Arrays
-#### 1.4- Basic Operations
-#### 1.5- Indexing, Slicing and Iterating
-#### 1.6- Shape Manipulation
-#### 1.7- Stacking different arrays
-#### 1.8- Splitting one array into several smaller ones
-#### 1.9- Copies and Views
+- Numpy Basics
+- Array Creation
+- Printing Arrays
+- Basic Operations
+- Indexing, Slicing and Iterating
+- Shape Manipulation
+- Stacking different arrays
+- Splitting one array into several smaller ones
+- Copies and Views
 
 ## Lecture Content
 
