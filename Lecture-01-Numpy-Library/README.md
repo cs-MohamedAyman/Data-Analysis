@@ -919,7 +919,7 @@ array([[6., 7., 6., 9., 0., 5., 4., 0., 6., 8., 5., 2.],
 ```
 vsplit splits along the vertical axis, and array_split allows one to specify along which axis to split.
 
-## 1.8- Copies and Views
+## 1.9- Copies and Views
 
 When operating and manipulating arrays, their data is sometimes copied into a new array and sometimes not. This is often a source of confusion for beginners. There are three cases:
 
