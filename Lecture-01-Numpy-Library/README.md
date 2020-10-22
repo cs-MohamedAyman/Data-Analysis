@@ -18,13 +18,14 @@
 
 ## 1.1- Numpy Basics
 
-NumPy’s main object is the homogeneous multidimensional array. It is a table of elements (usually numbers), all of the same type, indexed by a tuple of non-negative integers. In NumPy dimensions are called axes.
+- NumPy’s main object is the homogeneous multidimensional array. It is a table of elements (usually numbers), all of the same type, indexed by a tuple of non-negative integers. In NumPy dimensions are called axes.
 
-NumPy’s array class is called ndarray. It is also known by the alias array. Note that numpy.array is not the same as the Standard Python Library class array.array, which only handles one-dimensional arrays and offers less functionality. The more important attributes of an ndarray object are:
+- NumPy’s array class is called ndarray. It is also known by the alias array. Note that numpy.array is not the same as the Standard Python Library class array.array, which only handles one-dimensional arrays and offers less functionality. The more important attributes of an ndarray object are:
 
-Numpy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays. If you are already familiar with MATLAB, you might find this tutorial useful to get started with Numpy.
-Datatypes
-Every numpy array is a grid of elements of the same type. Numpy provides a large set of numeric datatypes that you can use to construct arrays. Numpy tries to guess a datatype when you create an array, but functions that construct arrays usually also include an optional argument to explicitly specify the datatype. Here is an example:
+- Numpy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays.
+
+- Every numpy array is a grid of elements of the same type. Numpy provides a large set of numeric datatypes that you can use to construct arrays. Numpy tries to guess a datatype when you create an array, but functions that construct arrays usually also include an optional argument to explicitly specify the datatype.
+
 ```python
 import numpy as np
 # Let numpy choose the datatype
@@ -38,10 +39,11 @@ x = np.array([1, 2], dtype=np.int64)
 print(x.dtype)
 ```
 ```text
-int64
+int32
 float64
 int64
 ```
+
 - ***ndarray.ndim***: the number of axes (dimensions) of the array.
 
 - ***ndarray.shape***: the dimensions of the array. This is a tuple of integers indicating the size of the array in each dimension. For a matrix with n rows and m columns, shape will be (n,m). The length of the shape tuple is therefore the number of axes, ndim.
@@ -53,60 +55,74 @@ int64
 - ***ndarray.itemsize***: the size in bytes of each element of the array. For example, an array of elements of type float64 has itemsize 8 (=64/8), while one of type complex32 has itemsize 4 (=32/8). It is equivalent to ndarray.dtype.itemsize.
 
 - ***ndarray.data***: the buffer containing the actual elements of the array. Normally, we won’t need to use this attribute because we will access the elements in an array using indexing facilities.
+
 ```python
 import numpy as np
-a = np.arange(15).reshape(3, 5)
-print(a)
-print(a.shape)
-print(a.ndim)
-print(a.dtype.name)
-print(a.itemsize)
-print(a.size)
-print(type(a))
-b = np.array([6, 7, 8])
-print(b)
-print(type(b))
+x = np.array([5, -7, 9])
+print(x)
+print(x.shape)
+print(x.ndim)
+print(x.dtype.name)
+print(x.itemsize)
+print(x.size)
+print(type(x))
+y = np.arange(15).reshape(3, 5)
+print(y)
+print(y.shape)
+print(y.ndim)
+print(y.dtype.name)
+print(y.itemsize)
+print(y.size)
+print(type(y))
 ```
 ```text
-array([[ 0,  1,  2,  3,  4],
-       [ 5,  6,  7,  8,  9],
-       [10, 11, 12, 13, 14]])
+[ 5 -7  9]
+(3,)
+1
+int32
+4
+3
+<class 'numpy.ndarray'>
+[[ 0  1  2  3  4]
+ [ 5  6  7  8  9]
+ [10 11 12 13 14]]
 (3, 5)
 2
-'int64'
-8
+int32
+4
 15
-<class 'numpy.ndarray'>
-array([6, 7, 8])
 <class 'numpy.ndarray'>
 ```
 
 ## 1.2- Array Creation
 
-A numpy array is a grid of values, all of the same type, and is indexed by a tuple of nonnegative integers. The number of dimensions is the rank of the array; the shape of an array is a tuple of integers giving the size of the array along each dimension.
+- A numpy array is a grid of values, all of the same type, and is indexed by a tuple of nonnegative integers. The number of dimensions is the rank of the array; the shape of an array is a tuple of integers giving the size of the array along each dimension.
 
-We can initialize numpy arrays from nested Python lists, and access elements using square brackets:
+- We can initialize numpy arrays from nested Python lists, and access elements using square brackets:
+
 ```python
 import numpy as np
-a = np.array([1, 2, 3])
-print(type(a))
-print(a.shape)
-print(a[0], a[1], a[2])
-a[0] = 5
-print(a)
-b = np.array([[1, 2, 3], [4, 5, 6]])
-print(b.shape)
-print(b[0, 0], b[0, 1], b[1, 0])
+x = np.array([1, 2, 3])
+print(type(x))
+print(x.shape)
+print(x[0], x[1], x[2])
+x[0] = 5
+print(x)
+y = np.array([[1, 2, 3], [4, 5, 6]])
+print(y.shape)
+print(y[0, 0], y[0, 1], y[1, 1], y[1, 2])
 ```
 ```text
 <class 'numpy.ndarray'>
 (3,)
 1 2 3
-[5, 2, 3]
+[5 2 3]
 (2, 3)
-1 2 4
+1 2 5 6
 ```
-Numpy also provides many functions to create arrays:
+
+- Numpy also provides many functions to create arrays:
+
 ```python
 import numpy as np
 a = np.zeros((2, 2))
@@ -131,8 +147,9 @@ print(e)
 [[ 0.91940167  0.08143941]
  [ 0.68744134  0.87236687]]
 ```
-There are several ways to create arrays.
-For example, you can create an array from a regular Python list or tuple using the array function. The type of the resulting array is deduced from the type of the elements in the sequences.
+
+- There are several ways to create arrays. For example, you can create an array from a regular Python list or tuple using the array function. The type of the resulting array is deduced from the type of the elements in the sequences.
+
 ```python
 import numpy as np
 a = np.array([2,3,4])
@@ -142,27 +159,32 @@ b = np.array([1.2, 3.5, 5.1])
 print(b.dtype)
 ```
 ```text
-array([2, 3, 4])
-dtype('int64')
-dtype('float64')
+[2 3 4]
+int64
+float64
 ```
-array transforms sequences of sequences into two-dimensional arrays, sequences of sequences of sequences into three-dimensional arrays, and so on.
+
+- array transforms sequences of sequences into two-dimensional arrays, sequences of sequences of sequences into three-dimensional arrays, and so on.
+
 ```python
-b = np.array([(1.5,2,3), (4,5,6)])
-print(b)
-c = np.array([[1,2], [3,4]], dtype=complex)
+c = np.array([(1.5, 2, 3), (4, 5, 6)])
 print(c)
+d = np.array([[1, 2], [3, 4]], dtype=complex)
+print(d)
 ```
 ```text
-array([[1.5, 2. , 3. ],
-       [4. , 5. , 6. ]])
-array([[1.+0.j, 2.+0.j],
-       [3.+0.j, 4.+0.j]])
+[[1.5 2.  3. ]
+ [4.  5.  6. ]]
+[[1.+0.j 2.+0.j]
+ [3.+0.j 4.+0.j]]
 ```
-Often, the elements of an array are originally unknown, but its size is known. Hence, NumPy offers several functions to create arrays with initial placeholder content. These minimize the necessity of growing arrays, an expensive operation.
 
-The function zeros creates an array full of zeros, the function ones creates an array full of ones, and the function empty creates an array whose initial content is random and depends on the state of the memory. By default, the dtype of the created array is float64.
+- Often, the elements of an array are originally unknown, but its size is known. Hence, NumPy offers several functions to create arrays with initial placeholder content. These minimize the necessity of growing arrays, an expensive operation.
+
+- The function zeros creates an array full of zeros, the function ones creates an array full of ones, and the function empty creates an array whose initial content is random and depends on the state of the memory. By default, the dtype of the created array is float64.
+
 ```python
+import numpy as np
 x = np.zeros((3, 4))
 print(x)
 x = np.ones((2,3,4), dtype=np.int16)
@@ -171,30 +193,36 @@ x = np.empty((2,3))
 print(x)
 ```
 ```text
-array([[0., 0., 0., 0.],
-       [0., 0., 0., 0.],
-       [0., 0., 0., 0.]])
-array([[[1, 1, 1, 1],
-        [1, 1, 1, 1],
-        [1, 1, 1, 1]],
-       [[1, 1, 1, 1],
-        [1, 1, 1, 1],
-        [1, 1, 1, 1]]], dtype=int16)
-array([[  3.73603959e-262,   6.02658058e-154,   6.55490914e-260],  # may vary
-       [  5.30498948e-313,   3.14673309e-307,   1.00000000e+000]])
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[[1 1 1 1]
+  [1 1 1 1]
+  [1 1 1 1]]
+
+ [[1 1 1 1]
+  [1 1 1 1]
+  [1 1 1 1]]]
+[[  3.73603959e-262   6.02658058e-154   6.55490914e-260]
+ [  5.30498948e-313   3.14673309e-307   1.00000000e+000]]
 ```
-To create sequences of numbers, NumPy provides the arange function which is analogous to the Python built-in range, but returns an array.
+
+- To create sequences of numbers, NumPy provides the arange function which is analogous to the Python built-in range, but returns an array.
+
 ```python
+import numpy as np
 x = np.arange(10, 30, 5)
 print(x)
 x = np.arange(0, 2, 0.3)
 print(x)
 ```
 ```text
-array([10, 15, 20, 25])
-array([0. , 0.3, 0.6, 0.9, 1.2, 1.5, 1.8])
+[10 15 20 25]
+[0.  0.3 0.6 0.9 1.2 1.5 1.8]
 ```
-When arange is used with floating point arguments, it is generally not possible to predict the number of elements obtained, due to the finite floating point precision. For this reason, it is usually better to use the function linspace that receives as an argument the number of elements that we want, instead of the step:
+
+- When arange is used with floating point arguments, it is generally not possible to predict the number of elements obtained, due to the finite floating point precision. For this reason, it is usually better to use the function linspace that receives as an argument the number of elements that we want, instead of the step:
+
 ```python
 import numpy as np
 x = np.linspace(0, 2*np.pi, 5)
@@ -209,17 +237,18 @@ print(f)
 
 ## 1.3- Printing Arrays
 
-When you print an array, NumPy displays it in a similar way to nested lists, but with the following layout:
-the last axis is printed from left to right, the second-to-last is printed from top to bottom, the rest are also printed from top to bottom, with each slice separated from the next by an empty line.
-One-dimensional arrays are then printed as rows, bidimensionals as matrices and tridimensionals as lists of matrices.
+- When you print an array, NumPy displays it in a similar way to nested lists, but with the following layout: the last axis is printed from left to right, the second-to-last is printed from top to bottom, the rest are also printed from top to bottom, with each slice separated from the next by an empty line. One-dimensional arrays are then printed as rows, bidimensionals as matrices and tridimensionals as lists of matrices.
 
 ```python
 import numpy as np
-a = np.arange(6)                         # 1d array
+# 1d array
+a = np.arange(6)                         
 print(a)
-b = np.arange(12).reshape(4,3)           # 2d array
+# 2d array
+b = np.arange(12).reshape(4, 3)
 print(b)
-c = np.arange(24).reshape(2,3,4)         # 3d array
+# 3d array
+c = np.arange(24).reshape(2, 3, 4)
 print(c)
 ```
 ```text
@@ -231,11 +260,14 @@ print(c)
 [[[ 0  1  2  3]
   [ 4  5  6  7]
   [ 8  9 10 11]]
+
  [[12 13 14 15]
   [16 17 18 19]
   [20 21 22 23]]]
 ```
-If an array is too large to be printed, NumPy automatically skips the central part of the array and only prints the corners:
+
+- If an array is too large to be printed, NumPy automatically skips the central part of the array and only prints the corners:
+
 ```python
 import numpy as np
 x = np.arange(10000)
@@ -256,108 +288,128 @@ print(x)
 
 ## 1.4- Basic Operations
 
-Array math
-Basic mathematical functions operate elementwise on arrays, and are available both as operator overloads and as functions in the numpy module:
+- Basic mathematical functions operate elementwise on arrays, and are available both as operator overloads and as functions in the numpy module:
+
 ```python
 import numpy as np
-
-x = np.array([[1,2],[3,4]], dtype=np.float64)
-y = np.array([[5,6],[7,8]], dtype=np.float64)
-
+x = np.array([[1, 2], [3, 4]], dtype=np.float64)
+y = np.array([[5, 6], [7, 8]], dtype=np.float64)
 # Elementwise sum; both produce the array
-# [[ 6.0  8.0]
-#  [10.0 12.0]]
 print(x + y)
 print(np.add(x, y))
-
 # Elementwise difference; both produce the array
-# [[-4.0 -4.0]
-#  [-4.0 -4.0]]
 print(x - y)
 print(np.subtract(x, y))
-
 # Elementwise product; both produce the array
-# [[ 5.0 12.0]
-#  [21.0 32.0]]
 print(x * y)
 print(np.multiply(x, y))
-
 # Elementwise division; both produce the array
-# [[ 0.2         0.33333333]
-#  [ 0.42857143  0.5       ]]
 print(x / y)
 print(np.divide(x, y))
-
 # Elementwise square root; produces the array
-# [[ 1.          1.41421356]
-#  [ 1.73205081  2.        ]]
 print(np.sqrt(x))
 ```
 ```text
-
+[[ 6.  8.]
+ [10. 12.]]
+[[ 6.  8.]
+ [10. 12.]]
+[[-4. -4.]
+ [-4. -4.]]
+[[-4. -4.]
+ [-4. -4.]]
+[[ 5. 12.]
+ [21. 32.]]
+[[ 5. 12.]
+ [21. 32.]]
+[[0.2        0.33333333]
+ [0.42857143 0.5       ]]
+[[0.2        0.33333333]
+ [0.42857143 0.5       ]]
+[[1.         1.41421356]
+ [1.73205081 2.        ]]
 ```
-Note that unlike MATLAB, * is elementwise multiplication, not matrix multiplication. We instead use the dot function to compute inner products of vectors, to multiply a vector by a matrix, and to multiply matrices. dot is available both as a function in the numpy module and as an instance method of array objects:
+
+- Note that unlike MATLAB, * is elementwise multiplication, not matrix multiplication. We instead use the dot function to compute inner products of vectors, to multiply a vector by a matrix, and to multiply matrices. dot is available both as a function in the numpy module and as an instance method of array objects:
+
 ```python
 import numpy as np
-
-x = np.array([[1,2],[3,4]])
-y = np.array([[5,6],[7,8]])
-
-v = np.array([9,10])
+x = np.array([[1, 2], [3, 4]])
+y = np.array([[5, 6], [7, 8]])
+v = np.array([9, 10])
 w = np.array([11, 12])
-
-# Inner product of vectors; both produce 219
+# Inner product of vectors
 print(v.dot(w))
 print(np.dot(v, w))
-
-# Matrix / vector product; both produce the rank 1 array [29 67]
+# Matrix & Vector product
 print(x.dot(v))
 print(np.dot(x, v))
-
-# Matrix / matrix product; both produce the rank 2 array
-# [[19 22]
-#  [43 50]]
+# Matrix & Matrix product
 print(x.dot(y))
 print(np.dot(x, y))
 ```
 ```text
-
+219
+219
+[29 67]
+[29 67]
+[[19 22]
+ [43 50]]
+[[19 22]
+ [43 50]]
 ```
-Numpy provides many useful functions for performing computations on arrays; one of the most useful is sum:
+
+- Numpy provides many useful functions for performing computations on arrays; one of the most useful is sum:
+
 ```python
 import numpy as np
-
-x = np.array([[1,2],[3,4]])
-
-print(np.sum(x))  # Compute sum of all elements; prints "10"
-print(np.sum(x, axis=0))  # Compute sum of each column; prints "[4 6]"
-print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
+x = np.array([[1, 2], [3, 4]])
+# Compute sum of all elements
+print(np.sum(x))
+# Compute sum of each column
+print(np.sum(x, axis=0))  
+# Compute sum of each row
+print(np.sum(x, axis=1))  
 ```
 ```text
-
+10
+[4 6]
+[3 7]
 ```
-You can find the full list of mathematical functions provided by numpy in the documentation.
 
-Apart from computing mathematical functions using arrays, we frequently need to reshape or otherwise manipulate data in arrays. The simplest example of this type of operation is transposing a matrix; to transpose a matrix, simply use the T attribute of an array object:
+- Apart from computing mathematical functions using arrays, we frequently need to reshape or otherwise manipulate data in arrays. The simplest example of this type of operation is transposing a matrix; to transpose a matrix, simply use the T attribute of an array object:
+
 ```python
 import numpy as np
-
-x = np.array([[1,2], [3,4]])
-print(x)    # Prints "[[1 2]
-            #          [3 4]]"
-print(x.T)  # Prints "[[1 3]
-            #          [2 4]]"
-
+x = np.array([[1, 2], [3, 4]])
+print(x)
+print(x.T)
+x = np.array([[1, 2], [3, 4], [5, 6]])
+print(x)
+print(x.T)
 # Note that taking the transpose of a rank 1 array does nothing:
-v = np.array([1,2,3])
-print(v)    # Prints "[1 2 3]"
-print(v.T)  # Prints "[1 2 3]"
+v = np.array([1, 2, 3])
+print(v)
+print(v.T)
 ```
 ```text
-
+[[1 2]
+ [3 4]]
+[[1 3]
+ [2 4]]
+[[1 2]
+ [3 4]
+ [5 6]]
+[[1 3 5]
+ [2 4 6]]
+[1 2 3]
+[1 2 3]
 ```
-Arithmetic operators on arrays apply elementwise. A new array is created and filled with the result.
+
+- Arithmetic operators on arrays apply elementwise. A new array is created and filled with the result.
+
 ```python
+import numpy as np
 a = np.array([20, 30, 40, 50])
 b = np.arange(4)
 print(b)
@@ -368,18 +420,21 @@ print(10 * np.sin(a))
 print(a < 35)
 ```
 ```text
-array([0, 1, 2, 3])
-array([20, 29, 38, 47])
-array([0, 1, 4, 9])
-array([9.12945251, -9.88031624,  7.4511316 , -2.62374854])
-array([True,  True, False, False])
+[0 1 2 3]
+[20 29 38 47]
+[0 1 4 9]
+[ 9.12945251 -9.88031624  7.4511316  -2.62374854]
+[True True False False]
 ```
-Unlike in many matrix languages, the product operator * operates elementwise in NumPy arrays. The matrix product can be performed using the @ operator (in python >=3.5) or the dot function or method:
+
+- Unlike in many matrix languages, the product operator * operates elementwise in NumPy arrays. The matrix product can be performed using the @ operator (in python >=3.5) or the dot function or method:
+
 ```python
-A = np.array([[1,1],
-              [0,1]])
-B = np.array([[2,0],
-              [3,4]])
+import numpy as np
+A = np.array([[1, 1],
+              [0, 1]])
+B = np.array([[2, 0],
+              [3, 4]])
 x = A * B
 print(x)
 x = A @ B
@@ -388,97 +443,121 @@ x = A.dot(B)
 print(x)
 ```
 ```text
-array([[2, 0],
-       [0, 4]])
-array([[5, 4],
-       [3, 4]])
-array([[5, 4],
-       [3, 4]])
+[[2 0]
+ [0 4]]
+[[5 4]
+ [3 4]]
+[[5 4]
+ [3 4]]
 ```
-Some operations, such as += and *=, act in place to modify an existing array rather than create a new one.
+
+- Some operations, such as += and *=, act in place to modify an existing array rather than create a new one.
+
 ```python
-rg = np.random.default_rng(1)
-a = np.ones((2,3), dtype=int)
-b = rg.random((2,3))
+import numpy as np
+a = np.ones((2, 3), dtype=int)
 a *= 3
 print(a)
+b = np.random.random((2, 3))
 b += a
 print(b)
 ```
 ```text
-array([[3, 3, 3],
-       [3, 3, 3]])
-array([[3.51182162, 3.9504637 , 3.14415961],
-       [3.94864945, 3.31183145, 3.42332645]])
+[[3 3 3]
+ [3 3 3]]
+[[3.7638794  3.43247232 3.06670913]
+ [3.44747983 3.81512498 3.23714301]]
 ```
-When operating with arrays of different types, the type of the resulting array corresponds to the more general or precise one (a behavior known as upcasting).
+
+- When operating with arrays of different types, the type of the resulting array corresponds to the more general or precise one (a behavior known as upcasting).
+
 ```python
+import numpy as np
 a = np.ones(3, dtype=np.int32)
-b = np.linspace(0,pi,3)
-print(b.dtype.name)
-c = a + b
-print(c)
-print(c.dtype.name)
-d = np.exp(c * 1j)
-print(d)
-print(d.dtype.name)
-```
-```text
-'float64'
-array([1.        , 2.57079633, 4.14159265])
-'float64'
-array([ 0.54030231+0.84147098j, -0.84147098+0.54030231j, 
-       -0.54030231-0.84147098j])
-'complex128'
-```
-Many unary operations, such as computing the sum of all the elements in the array, are implemented as methods of the ndarray class.
-```python
-a = rg.random((2,3))
+print(a.dtype.name)
 print(a)
-print(a.sum())
-print(a.min())
-print(a.max())
-```
-```text
-array([[0.82770259, 0.40919914, 0.54959369],
-       [0.02755911, 0.75351311, 0.53814331]])
-3.1057109529998157
-0.027559113243068367
-0.8277025938204418
-```
-By default, these operations apply to the array as though it were a list of numbers, regardless of its shape. However, by specifying the axis parameter you can apply an operation along the specified axis of an array:
-```python
-b = np.arange(12).reshape(3,4)
+b = np.linspace(0, np.pi, 3)
+print(b.dtype.name)
 print(b)
-x = b.sum(axis=0)                            # sum of each column
+c = a + b
+print(c.dtype.name)
+print(c)
+d = np.exp(c * 1j)
+print(d.dtype.name)
+print(d)
+```
+```text
+int32
+[1 1 1]
+float64
+[0.         1.57079633 3.14159265]
+float64
+[1.         2.57079633 4.14159265]
+complex128
+[ 0.54030231+0.84147098j -0.84147098+0.54030231j -0.54030231-0.84147098j]
+```
+
+- Many unary operations, such as computing the sum of all the elements in the array, are implemented as methods of the ndarray class.
+
+```python
+import numpy as np
+x = np.array([[1, 2], [3, 4], [5, 6]])
 print(x)
-x = b.min(axis=1)                            # min of each row
+print(x.sum())
+print(x.min())
+print(x.max())
+```
+```text
+[[1 2]
+ [3 4]
+ [5 6]]
+21
+1
+6
+```
+
+- By default, these operations apply to the array as though it were a list of numbers, regardless of its shape. However, by specifying the axis parameter you can apply an operation along the specified axis of an array:
+
+```python
+import numpy as np
+b = np.arange(12).reshape(3, 4)
+print(b)
+# sum of each column
+x = b.sum(axis=0)
 print(x)
-x = b.cumsum(axis=1)                         # cumulative sum along each row
+# min of each row
+x = b.min(axis=1)
+print(x)
+# cumulative sum along each row
+x = b.cumsum(axis=1)
 print(x)
 ```
 ```text
-array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11]])
-array([12, 15, 18, 21])
-array([0, 4, 8])
-array([[ 0,  1,  3,  6],
-       [ 4,  9, 15, 22],
-       [ 8, 17, 27, 38]])
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+[12 15 18 21]
+[0 4 8]
 ```
-Simple Array Operations
+
+- Simple Array Operations
+
 ```python
 import numpy as np
 a = np.array([[1.0, 2.0], [3.0, 4.0]])
 print(a)
 a.transpose()
+print(a)
 np.linalg.inv(a)
-u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
+print(a)
+# unit 2x2 matrix; "eye" represents "I"
+u = np.eye(2) 
 print(u)
 j = np.array([[0.0, -1.0], [1.0, 0.0]])
-j @ j        # matrix product
-x = np.trace(u)  # trace
+# matrix product
+print(j @ j)
+# trace
+x = np.trace(u)
 print(x)
 y = np.array([[5.], [7.]])
 x = np.linalg.solve(a, y)
@@ -489,36 +568,42 @@ print(x)
 ```text
 [[1. 2.]
  [3. 4.]]
-array([[1., 3.],
-       [2., 4.]])
-array([[-2. ,  1. ],
-       [ 1.5, -0.5]])
-array([[1., 0.],
-       [0., 1.]])
-array([[-1.,  0.],
-       [ 0., -1.]])
+[[1. 2.]
+ [3. 4.]]
+[[1. 2.]
+ [3. 4.]]
+[[1. 0.]
+ [0. 1.]]
+[[-1.  0.]
+ [ 0. -1.]]
 2.0
-array([[-3.],
-       [ 4.]])
+[[-3.]
+ [ 4.]]
 (array([0.+1.j, 0.-1.j]), array([[0.70710678+0.j        , 0.70710678-0.j        ],
        [0.        -0.70710678j, 0.        +0.70710678j]]))
 ```
-NumPy provides familiar mathematical functions such as sin, cos, and exp. In NumPy, these are called “universal functions”(ufunc). Within NumPy, these functions operate elementwise on an array, producing an array as output.
+
+- NumPy provides familiar mathematical functions such as sin, cos, and exp. In NumPy, these are called “universal functions”(ufunc). Within NumPy, these functions operate elementwise on an array, producing an array as output.
+
 ```python
-B = np.arange(3)
-print(B)
-x = np.exp(B)
+import numpy as np
+b = np.arange(3)
+print(b)
+x = np.exp(b)
 print(x)
-x = np.sqrt(B)
-C = np.array([2., -1., 4.])
-x = np.add(B, C)
+x = np.sqrt(b)
+print(x)
+c = np.array([2., -1., 4.])
+print(c)
+x = np.add(b, c)
 print(x)
 ```
 ```text
-array([0, 1, 2])
-array([1.        , 2.71828183, 7.3890561 ])
-array([0.        , 1.        , 1.41421356])
-array([2., 0., 6.])
+[0 1 2]
+[1.         2.71828183 7.3890561 ]
+[0.         1.         1.41421356]
+[ 2. -1.  4.]
+[2. 0. 6.]
 ```
 
 ## 1.5- Indexing, Slicing and Iterating
