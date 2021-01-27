@@ -52,8 +52,17 @@ Data Analysis lectures for computer science students.
 
 ## Coursera-Specializations
 
-* ***Data Science Math Skills*** by Duke University
+* ***Improving your statistical inferences*** by Eindhoven University of Technology
+* ***Bayesian Statistics: From Concept to Data Analysis*** by University of California, Santa Cruz
+* ***Bayesian Statistics: Techniques and Models*** by University of California, Santa Cruz
+* ***Bayesian Statistics: Mixture Models*** by University of California, Santa Cruz
+* ***Introduction to Data Analytics*** by IBM
+* ***Everyday Excel, Part 1*** by University of Colorado Boulder
+* ***Everyday Excel, Part 2*** by University of Colorado Boulder
+* ***Excel Fundamentals for Data Analysis*** by Macquarie University
+* ***Data Visualization in Excel*** by Macquarie University
 * ***Data Analysis and Presentation Skills: the PwC Approach Specialization*** by PwC
+* ***Data Science Math Skills*** by Duke University
 * ***Data Processing Using Python*** by Nanjing University
 * ***Data Analysis and Interpretation Specialization*** by Wesleyan University
 * ***Mathematics for Machine Learning Specialization*** by Imperial College London
