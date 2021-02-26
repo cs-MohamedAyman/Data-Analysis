@@ -20,7 +20,7 @@ Data Analysis lectures for computer science students.
 <img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 <br>
 
-## `Part 2` Data Processing and Probability Distributions `40H`
+## `Part 2` Data Processing and Data Analysis Types `40H`
 
 ### Lecture 09 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-09-Pandas-Library)
 ### Lecture 10 - [Statsmodels Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-10-Statsmodels-Library)
