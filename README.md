@@ -1,38 +1,70 @@
 <img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
 
-# Data-Analysis `60H`
+# Data-Analysis `80H`
 Data Analysis lectures for computer science students.
 
-## `Part 1:` Linear Algebra with Python `20H`
+<img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
+<br>
 
-## Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-01-Numpy-Library)
-## Lecture 02 - [Scipy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-02-Scipy-Library)
-## Lecture 03 - [Vectors](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lecture-03-Vectors)
-## Lecture 04 - [Matrices](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-04-Matrices)
-## Lecture 05 - [Systems of Linear Equations](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-05-Systems-of-Linear-Equations)
-## Lecture 06 - [Eigenvalues and Eigenvectors](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-06-Eigenvalues-and-Eigenvectors)
+## `Part 1` Linear Algebra and Data Visualization `40H`
 
-## `Part 2:` Data Visualization with Python `20H`
+### Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-01-Numpy-Library)
+### Lecture 02 - [Scipy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-02-Scipy-Library)
+### Lecture 03 - [Vectors and Matrices](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lecture-03-Vectors-and-Matrices)
+### Lecture 04 - [Eigenvalues and Eigenvectors](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-04-Eigenvalues-and-Eigenvectors)
+### Lecture 05 - [Matplotlib Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-05-Matplotlib-Library)
+### Lecture 06 - [Seaborn Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-06-Seaborn-Library)
+### Lecture 07 - [Charting Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-07-Charting-Fundamentals)
+### Lecture 08 - [Dashboarding Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-08-Dashboarding-Fundamentals)
 
-## Lecture 07 - [Matplotlib Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-07-Matplotlib-Library)
-## Lecture 08 - [Seaborn Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-08-Seaborn-Library)
-## Lecture 09 - [Information Visualization](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-09-Information-Visualization)
-## Lecture 10 - [Charting Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-10-Charting-Fundamentals)
-## Lecture 11 - [Applied Visualizations](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lecture-11-Applied-Visualizations)
-## Lecture 12 - [Creating Dashboards and Storytelling](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-12-Creating-Dashboards-and-Storytelling)
+<img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
+<br>
 
-## `Part 3:` Probability and Statistics with Python `20H`
+## `Part 2` Data Processing and Probability Distributions `40H`
 
-## Lecture 13 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-13-Pandas-Library)
-## Lecture 14 - [Basic Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-14-Basic-Data-Processing)
-## Lecture 15 - [Advanced Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-15-Advanced-Data-Processing)
-## Lecture 16 - [Statistical Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-16-Statistical-Analysis)
-## Lecture 17 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-17-Probability-Distributions)
-## Lecture 18 - [Hypothesis Testing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-18-Hypothesis-Testing)
+### Lecture 09 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-09-Pandas-Library)
+### Lecture 10 - [Statsmodels Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-10-Statsmodels-Library)
+### Lecture 11 - [Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-11-Data-Processing)
+### Lecture 12 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-12-Probability-Distributions)
+### Lecture 13 - [Descriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-13-Descriptive-Analysis)
+### Lecture 14 - [Diagnostic Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-14-Diagnostic-Analysis)
+### Lecture 15 - [Predictive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-15-Predictive-Analysis)
+### Lecture 16 - [Prescriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-16-Prescriptive-Analysis)
 
+<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice2.jpg">
+<br>
+
+## `Assignments` `50H`
+
+### `Assignment 01` - 
+### `Assignment 02` - 
+### `Assignment 03` - 
+### `Assignment 04` - 
+### `Assignment 05` - 
+### `Assignment 06` - 
+### `Assignment 07` - 
+### `Assignment 08` - 
+### `Assignment 09` - 
+### `Assignment 10` - 
+
+<img align="right" width="230" height="200" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/educational-projects.jpg">
+<br>
+
+## `Educational-Projects` `80H`
+
+### `Project 01` -
+### `Project 02` -
+### `Project 03` -
+### `Project 04` -
+### `Project 05` -
+### `Project 06` -
+### `Project 07` -
+### `Project 08` -
+
+<br>
 <img align="right" width="80" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/textbooks.jpg">
 
-## Textbooks
+## `Textbooks`
 
 * ***Data Analytics for Beginners: Basic Guide to Master Data Analytics***, Paul Kinley
 * ***Data Analytics For Beginners: A Beginner's Guide to Learn and Master Data Analytics***, Robert J. Woz
@@ -50,7 +82,7 @@ Data Analysis lectures for computer science students.
 
 <img align="right" width="90" height="50" src="https://github.com/cs-MohamedAyman/Coursera-Specializations/blob/master/organizations-logos/coursera.jpg">
 
-## Coursera-Specializations
+## `Coursera-Specializations`
 
 * ***Improving your statistical inferences*** by Eindhoven University of Technology
 * ***Bayesian Statistics: From Concept to Data Analysis*** by University of California, Santa Cruz
@@ -74,12 +106,18 @@ Data Analysis lectures for computer science students.
 
 <img align="right" width="100" height="100" src="https://github.com/cs-MohamedAyman/DataCamp-Tracks/blob/master/organizations-logos/datacamp.jpg">
 
-## DataCamp-Tracks
+## `DataCamp-Tracks`
+
+*
+*
+*
+*
 
 <img align="right" width="80" height="50" src="https://github.com/cs-MohamedAyman/YouTube-Playlists/blob/master/organizations-logos/youtube.jpg">
 
-## YouTube-Playlists
+## `YouTube-Playlists`
 
-<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/educational-projects.jpg">
-
-## Educational-Projects
+*
+*
+*
+*
