@@ -3,38 +3,196 @@
 # Data-Analysis `80H`
 Data Analysis lectures for computer science students.
 
-<img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
+<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 <br>
 
-## `Part 1` Linear Algebra and Data Visualization `40H`
+## `Part 1` Linear Algebra and Data Visualization `40 hrs`
 
-### Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-01-Numpy-Library)
-### Lecture 02 - [Scipy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-02-Scipy-Library)
-### Lecture 03 - [Vectors and Matrices](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lecture-03-Vectors-and-Matrices)
-### Lecture 04 - [Eigenvalues and Eigenvectors](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-04-Eigenvalues-and-Eigenvectors)
-### Lecture 05 - [Matplotlib Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-05-Matplotlib-Library)
-### Lecture 06 - [Seaborn Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-06-Seaborn-Library)
-### Lecture 07 - [Charting Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-07-Charting-Fundamentals)
-### Lecture 08 - [Dashboarding Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-08-Dashboarding-Fundamentals)
+### Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
 
-<img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 02 - [Scipy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 03 - [Vectors and Matrices](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 04 - [Eigenvalues and Eigenvectors](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 05 - [Matplotlib Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 06 - [Seaborn Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 07 - [Charting Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 08 - [Dashboarding Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 <br>
 
-## `Part 2` Data Processing and Data Analysis Types `40H`
+## `Part 2` Data Processing and Data Analysis Types `40 hrs`
 
-### Lecture 09 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-09-Pandas-Library)
-### Lecture 10 - [Statsmodels Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-10-Statsmodels-Library)
-### Lecture 11 - [Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-11-Data-Processing)
-### Lecture 12 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-12-Probability-Distributions)
-### Lecture 13 - [Descriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-13-Descriptive-Analysis)
-### Lecture 14 - [Diagnostic Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-14-Diagnostic-Analysis)
-### Lecture 15 - [Predictive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-15-Predictive-Analysis)
-### Lecture 16 - [Prescriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lecture-16-Prescriptive-Analysis)
+### Lecture 09 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 10 - [Statsmodels Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 11 - [Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 12 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 13 - [Descriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 14 - [Diagnostic Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 15 - [Predictive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
+
+### Lecture 16 - [Prescriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+<details>
+  <summary>Agenda</summary><br>
+
+  - 
+  - 
+  - 
+  - 
+  - 
+</details>
 
 <img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice2.jpg">
 <br>
 
-## `Assignments` `50H`
+## `Assignments` `5 hrs`/`Assignment`
 
 ### `Assignment 01` - 
 ### `Assignment 02` - 
@@ -47,19 +205,20 @@ Data Analysis lectures for computer science students.
 ### `Assignment 09` - 
 ### `Assignment 10` - 
 
-<img align="right" width="230" height="200" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/educational-projects.jpg">
+<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/educational-projects.jpg">
 <br>
 
-## `Educational-Projects` `80H`
+## `Educational-Projects` `10 hrs`/`Project`
 
-### `Project 01` -
-### `Project 02` -
-### `Project 03` -
-### `Project 04` -
-### `Project 05` -
-### `Project 06` -
-### `Project 07` -
-### `Project 08` -
+|`Project 01` | `Project 02` | `Project 03` | `Project 04` |
+|:----:|:----:|:----:|:----:|
+| | | | |
+| | | | |
+
+|`Project 05` | `Project 06` | `Project 07` | `Project 08` |
+|:----:|:----:|:----:|:----:|
+| | | | |
+| | | | |
 
 <br>
 <img align="right" width="80" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/textbooks.jpg">
