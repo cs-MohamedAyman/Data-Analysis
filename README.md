@@ -1,12 +1,13 @@
-<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
-
 # Data-Analysis
 Data Analysis lectures for computer science students.
 
-<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
+<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
+<br>
 <br>
 
-## `Part 1` Linear Algebra and Data Visualization `40 hrs`
+## `Part 1` Linear Algebra and Data Visualization `30 hrs`
+
+<img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
 ### Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
@@ -96,10 +97,13 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
+<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
+<br>
 <br>
 
-## `Part 2` Data Processing and Data Analysis Types `40 hrs`
+## `Part 2` Data Processing and Data Analysis Types `30 hrs`
+
+<img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
 ### Lecture 09 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
@@ -189,10 +193,13 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice2.jpg">
+<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
+<br>
 <br>
 
 ## `Assignments` `5 hrs`/`Assignment`
+
+<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice2.jpg">
 
 ### `Assignment 01` - 
 ### `Assignment 02` - 
@@ -205,10 +212,13 @@ Data Analysis lectures for computer science students.
 ### `Assignment 09` - 
 ### `Assignment 10` - 
 
-<img align="right" width="150" height="150" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/educational-projects.jpg">
+<img align="right" width="120" height="120" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/data-analysis.jpg">
+<br>
 <br>
 
 ## `Educational-Projects` `10 hrs`/`Project`
+
+<img align="middle" width="900" height="225" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/educational-projects.jpg">
 
 |`Project 01` | `Project 02` | `Project 03` | `Project 04` |
 |:----:|:----:|:----:|:----:|
