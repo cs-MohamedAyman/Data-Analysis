@@ -249,44 +249,14 @@ Data Analysis lectures for computer science students.
 * ***Python for Data Analysis (Paperback)***, Wes McKinney
 * ***Data Analysis with Open Source Tools: A Hands-On Guide for Programmers and Data Scientists (Paperback)***, Philipp K. Janert
 
-<img align="right" width="90" height="50" src="https://github.com/cs-MohamedAyman/Coursera-Specializations/blob/master/organizations-logos/coursera.jpg">
+<img align="right" width="80" height="55" src="https://github.com/cs-MohamedAyman/Coursera-Specializations/blob/master/organizations-logos/coursera.jpg">
 
-## `Coursera-Specializations`
-
-* ***Improving your statistical inferences*** by Eindhoven University of Technology
-* ***Bayesian Statistics: From Concept to Data Analysis*** by University of California, Santa Cruz
-* ***Bayesian Statistics: Techniques and Models*** by University of California, Santa Cruz
-* ***Bayesian Statistics: Mixture Models*** by University of California, Santa Cruz
-* ***Introduction to Data Analytics*** by IBM
-* ***Everyday Excel, Part 1*** by University of Colorado Boulder
-* ***Everyday Excel, Part 2*** by University of Colorado Boulder
-* ***Excel Fundamentals for Data Analysis*** by Macquarie University
-* ***Data Visualization in Excel*** by Macquarie University
-* ***Data Analysis and Presentation Skills: the PwC Approach Specialization*** by PwC
-* ***Data Science Math Skills*** by Duke University
-* ***Data Processing Using Python*** by Nanjing University
-* ***Data Analysis and Interpretation Specialization*** by Wesleyan University
-* ***Mathematics for Machine Learning Specialization*** by Imperial College London
-* ***Statistics with Python Specialization*** by University of Michigan
-* ***Python and Statistics for Financial Analysis*** by The Hong Kong University of Science and Technology
-* ***Python Data Products for Predictive Analytics Specialization*** by University of California, San Diego
-* ***Applied Data Science with Python Specialization*** by University of Michigan
-* ***Python for Everybody Specialization*** by University of Michigan
+## [`Coursera-Specializations`](https://github.com/cs-MohamedAyman/Coursera-Specializations/blob/master/Artificial-Intelligence-Specializations/README.md)
 
 <img align="right" width="100" height="100" src="https://github.com/cs-MohamedAyman/DataCamp-Tracks/blob/master/organizations-logos/datacamp.jpg">
 
-## `DataCamp-Tracks`
+## [`DataCamp-Tracks`](https://github.com/cs-MohamedAyman/DataCamp-Tracks/blob/master/Python-Tracks/README.md)
 
-*
-*
-*
-*
+<img align="right" width="80" height="55" src="https://github.com/cs-MohamedAyman/YouTube-Playlists/blob/master/organizations-logos/youtube.jpg">
 
-<img align="right" width="80" height="50" src="https://github.com/cs-MohamedAyman/YouTube-Playlists/blob/master/organizations-logos/youtube.jpg">
-
-## `YouTube-Playlists`
-
-*
-*
-*
-*
+## [`YouTube-Playlists`](https://github.com/cs-MohamedAyman/YouTube-Playlists/blob/master/Artificial-Intelligence-Playlists/README.md)
