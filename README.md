@@ -9,7 +9,7 @@ Data Analysis lectures for computer science students.
 
 <img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
-### Lecture 01 - [Numpy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 01 - [Introduction to Data Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -20,7 +20,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 02 - [Scipy Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 02 - [Vectors and Matrices](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -31,7 +31,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 03 - [Vectors and Matrices](https://github.com/cs-MohamedAyman/Data-Analysis/blob/master/Lectures/README.md)
+### Lecture 03 - [Eigenvalues and Eigenvectors](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -42,7 +42,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 04 - [Eigenvalues and Eigenvectors](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 04 - [Numpy and Scipy Libraries](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -53,7 +53,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 05 - [Matplotlib Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 05 - [Charting Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -64,7 +64,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 06 - [Seaborn Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 06 - [Dashboarding Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -75,7 +75,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 07 - [Charting Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 07 - [Matplotlib and Seaborn Libraries](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -86,7 +86,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 08 - [Dashboarding Fundamentals](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 08 - [Presnetation Prepration](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -105,7 +105,7 @@ Data Analysis lectures for computer science students.
 
 <img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
-### Lecture 09 - [Pandas Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 09 - [Data Processing I](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -116,7 +116,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 10 - [Statsmodels Library](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 10 - [Data Processing II](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -127,7 +127,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 11 - [Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 11 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -138,7 +138,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 12 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 12 - [Pandas and Statsmodels Libraries](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
