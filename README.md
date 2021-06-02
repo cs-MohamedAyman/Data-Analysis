@@ -5,7 +5,7 @@ Data Analysis lectures for computer science students.
 <br>
 <br>
 
-## `Part 1` Data Analysis and Data Visualization `30 hrs`
+## `Part 1` Data Analysis and Visualization `30 hrs`
 
 <img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
