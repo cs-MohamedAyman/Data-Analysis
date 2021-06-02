@@ -5,7 +5,7 @@ Data Analysis lectures for computer science students.
 <br>
 <br>
 
-## `Part 1` Linear Algebra and Data Visualization `30 hrs`
+## `Part 1` Introduction to Data Analysis and Data Visualization `30 hrs`
 
 <img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
@@ -101,11 +101,11 @@ Data Analysis lectures for computer science students.
 <br>
 <br>
 
-## `Part 2` Data Processing and Data Analysis Types `30 hrs`
+## `Part 2` Data Processing and Spreadsheets `30 hrs`
 
 <img align="right" width="160" height="160" src="https://github.com/cs-MohamedAyman/Computer-Science-Textbooks/blob/master/logos/practice1.jpg">
 
-### Lecture 09 - [Data Processing I](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 09 - [Data Processing](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -116,7 +116,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 10 - [Data Processing II](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 10 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -127,7 +127,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 11 - [Probability Distributions](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 11 - [Pandas and Statsmodels Libraries](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -138,7 +138,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 12 - [Pandas and Statsmodels Libraries](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 12 - [Introduction to Spreadsheets](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -149,7 +149,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 13 - [Descriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 13 - [Functions in Spreadsheets](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -160,7 +160,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 14 - [Diagnostic Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 14 - [Conditional Formatting in Spreadsheets](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -171,7 +171,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 15 - [Predictive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 15 - [Pivot Tables in Spreadsheets](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
@@ -182,7 +182,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 16 - [Prescriptive Analysis](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 16 - [Data Visualization in Spreadsheets](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
