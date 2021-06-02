@@ -86,7 +86,7 @@ Data Analysis lectures for computer science students.
   - 
 </details>
 
-### Lecture 08 - [Presnetation Prepration](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
+### Lecture 08 - [Presentation Preparation](https://github.com/cs-MohamedAyman/Data-Analysis/tree/master/Lectures/README.md)
 <details>
   <summary>Agenda</summary><br>
 
